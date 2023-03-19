@@ -1,5 +1,6 @@
 import Hero from "@/components/hero/hero";
 import Head from "next/head";
+import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <Footer />
       </main>
     </>
   );

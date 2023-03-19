@@ -1,22 +1,15 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import Image from "next/legacy/image";
 import logo from "@/assets/images/logo.png";
 import {
+  HStack,
   Box,
   Flex,
-  Avatar,
-  HStack,
   Link,
   IconButton,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack,
   InputGroup,
   InputLeftElement,
   Input,
@@ -76,6 +69,7 @@ const Header = () => {
             <InputGroup width={"48"}>
               <InputLeftElement
                 pointerEvents="none"
+                // eslint-disable-next-line react/no-children-prop
                 children={<SearchIcon color="black" />}
               />
               <Input type="text" placeholder="جست و جو ..." border={"hidden"} />

@@ -1,16 +1,3 @@
-import {
-  Flex,
-  VStack,
-  Text,
-  Heading,
-  HStack,
-  Tag,
-  Button,
-  Box,
-  useBreakpointValue,
-  IconButton,
-} from "@chakra-ui/react";
-import Slider from "react-slick";
 import Image from "next/legacy/image";
 import heroPic from "@/assets/images/hero-pic-1.png";
 import React, { useState } from "react";

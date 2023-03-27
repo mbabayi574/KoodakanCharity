@@ -92,7 +92,7 @@ const Footer = () => {
               {/* Google Map with company location */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5167629636476!2d51.44108551551574!3d35.73810133445774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0250c928f8d9%3A0x4c88d8c2a938935a!2skoodakancharity!5e0!3m2!1sen!2s!4v1679211434516!5m2!1sen!2s"
-                maxWidth="800vw"
+                Width="400"
                 // height="450"
                 style={{ border: 0, borderRadius: "10px" }}
                 allowfullscreen=""

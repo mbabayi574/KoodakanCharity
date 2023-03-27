@@ -1,4 +1,6 @@
+import Hero from "@/components/hero/hero";
 import Head from "next/head";
+import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -10,7 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>این یک متن آزمایشی است!</h1>
+        <Hero />
+        <Footer />
       </main>
     </>
   );

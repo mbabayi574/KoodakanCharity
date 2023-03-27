@@ -1,6 +1,6 @@
 import Hero from "@/components/hero/hero";
 import Head from "next/head";
-import Footer from "@/components/layout/footer";
+import Footer from "@/components/shared/footer/Footer";
 
 export default function Home() {
   return (

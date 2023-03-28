@@ -35,7 +35,7 @@
   &__transform {
     @for $index from 0 to 4 {
       &_#{$index} {
-        transform: translate($index * (-100) * 1%);
+        transform: translateX($index * (-100) * 1%);
       }
     }
   }

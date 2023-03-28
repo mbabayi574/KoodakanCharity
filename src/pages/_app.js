@@ -1,13 +1,11 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { RtlProvider } from "@/components/rtl-provider";
-import Header from "@/components/layout/header";
+import Header from "@/components/shared/header/Header";
 import "@/components/hero/hero.scss";
 import "@/styles/shared/title-box.scss";
 import "@/styles/global.scss";
 // 1. Import `extendTheme`
 import { extendTheme } from "@chakra-ui/react";
-
-import "@/styles/global.css";
 
 // 2. Call `extendTheme` and pass your custom values
 const theme = extendTheme({

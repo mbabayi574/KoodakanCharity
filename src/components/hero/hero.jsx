@@ -1,7 +1,6 @@
 import Image from "next/legacy/image";
 import heroPic from "@/assets/images/hero-pic-1.png";
 import React, { useState } from "react";
-
 const Hero = () => {
   const [current, setCurrent] = useState(0);
   const imageData = [

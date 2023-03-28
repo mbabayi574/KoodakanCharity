@@ -1,6 +1,7 @@
 import Hero from "@/components/hero/hero";
 import Head from "next/head";
 import Footer from "@/components/layout/footer";
+import Supporter from "@/components/supporter/supporter";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <Supporter />
         <Footer />
       </main>
     </>

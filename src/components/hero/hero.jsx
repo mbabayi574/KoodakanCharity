@@ -1,7 +1,7 @@
 import Image from "next/legacy/image";
 import heroPic from "@/assets/images/hero-pic-1.png";
 import React, { useState } from "react";
-import styles from "./hero.module.css";
+
 const Hero = () => {
   const [current, setCurrent] = useState(0);
   const imageData = [
@@ -27,24 +27,20 @@ const Hero = () => {
     },
   ];
   return (
-    <section className={styles.hero}>
-      <div
-        className={`${styles.hero__images} ${
-          styles[`hero__transform_${current}`]
-        }`}
-      >
+    <section className="hero">
+      <div className={`hero__images hero__transform_${current}`}>
         {imageData.map((image) => (
-          <div key={image.id} className={styles.hero__images__image}>
+          <div key={image.id} className="hero__images__image">
             <Image src={image.src} alt={image.alt} layout="responsive" />
           </div>
         ))}
       </div>
-      <div className={styles.hero__dots}>
+      <div className="hero__dots">
         {imageData.map((image) => (
           <div
             key={image.id}
-            className={`${styles.hero__dots__dot} ${
-              current === image.id && styles["hero__dots__dot-active"]
+            className={`hero__dots__dot ${
+              current === image.id && "hero__dots__dot-active"
             }`}
             onClick={() => setCurrent(image.id)}
           ></div>

@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "next/Image";
+import Image from "next/image";
 
-import { Box, Flex, Link, Text, Divider } from "@chakra-ui/react";
+import { Box, Flex, Link, Text, Divider, flexbox } from "@chakra-ui/react";
 
 import YoutubeIcon from "@/assets/images/socialmedia/youtube.png";
 import WhatsappIcon from "@/assets/images/socialmedia/whatsapp.png";
@@ -13,7 +13,9 @@ import AparatIcon from "@/assets/images/socialmedia/aparat.png";
 import PaymentLogo from "@/assets/images/PaymentLogo.png";
 
 import LocationIcon from "@/assets/images/location.png";
+
 import CallIcon from "@/assets/images/call.png";
+import { column } from "stylis";
 
 const NavLink = ({ children }) => (
   <Link
@@ -39,23 +41,28 @@ const IconLink = ({ children }) => (
 
 const Footer = () => {
   return (
-    <footer>
+    <footer >
       <Box
         as="footer"
+        padding={5}
         bg="#3AAEBB"
         borderTop="1px solid"
         borderColor="whiteAlpha.300"
       >
         {/* Container with 50% width in center */}
         <div
+          width={{sm:"100%", xl: "60%" }}
           style={{
-            width: "60vw",
             margin: "0 auto",
             padding: "1vw",
           }}
         >
-          <Flex direction="row" justify="space-between" align="center">
-            <Box p="7">
+          <Flex
+            direction={{ sm: "column", xl: "row" }}
+            justify="space-between"
+            align="center"
+          >
+            <Box p="7" order={{ sm: 2, xl: 1 }}>
               {/* Heading "معرفی تیم‎ها"
                   after that, we have two columns with eight links in each column */}
               <Text
@@ -68,18 +75,19 @@ const Footer = () => {
                 معرفی تیم‎ها
               </Text>
               <Flex
-                direction="row"
+                direction={{ sm: "column", xl: "row" }}
+                marginTop={"5"}
                 justify="space-between"
                 align="center"
-                gap={12}
+                gap={3}
               >
-                <Flex direction="column">
+                <Flex direction={{ sm: "row", xl: "column" }}>
                   <NavLink>بازسازی</NavLink>
                   <NavLink>طراحی</NavLink>
                   <NavLink>پشتیبانی</NavLink>
                   <NavLink>کارناوال شادی</NavLink>
                 </Flex>
-                <Flex direction="column">
+                <Flex direction={{ sm: "row", xl: "column" }}>
                   <NavLink>سرزمین آفتاب</NavLink>
                   <NavLink>پویش</NavLink>
                   <NavLink>مستند</NavLink>
@@ -88,22 +96,22 @@ const Footer = () => {
               </Flex>
             </Box>
 
-            <Box p="5">
+            <Box order={{ sm: 1, xl: 2 }}  width={"100%"}>
               {/* Google Map with company location */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5167629636476!2d51.44108551551574!3d35.73810133445774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0250c928f8d9%3A0x4c88d8c2a938935a!2skoodakancharity!5e0!3m2!1sen!2s!4v1679211434516!5m2!1sen!2s"
-                Width="400"
+                width="100%"
                 // height="450"
                 style={{ border: 0, borderRadius: "10px" }}
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </Box>
           </Flex>
           <Flex direction="row" align="center" justify="right" gap={3}>
             <Text color="white" fontFamily={"Vazirmatn-Regular"}>
-              ما را در شبکه‎های اجتماعی دنبال کنید
+              ما را در شبکه های اجتماعی دنبال کنید
             </Text>
 
             <div
@@ -146,7 +154,7 @@ const Footer = () => {
             align="center"
             marginTop={"5"}
           >
-            <Box>
+            <Box display={"flex"} gap={5} flexDirection={"column"}>
               <Flex
                 direction="row"
                 justify="space-between"

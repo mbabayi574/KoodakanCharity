@@ -42,8 +42,8 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <header>
-      <Box px={"8"}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Box px={"12"}>
+        <Flex h={"82px"} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}

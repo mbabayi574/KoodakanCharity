@@ -1,7 +1,7 @@
 import Hero from "@/components/hero/hero";
 import Head from "next/head";
-import Footer from "@/components/layout/footer";
 import Supporter from "@/components/supporter/supporter";
+import Footer from "@/components/shared/footer/Footer";
 
 export default function Home() {
   return (
